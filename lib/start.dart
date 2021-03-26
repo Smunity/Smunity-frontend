@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smunity/interest.dart';
+import 'package:smunity/profile.dart';
+
+import 'notifications.dart';
 
 class Start extends StatefulWidget {
   @override
@@ -17,7 +20,7 @@ class _StartState extends State<Start> {
               height: MediaQuery.of(context).size.height * 1,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("images/b1.png"),
+                  image: AssetImage("images/bg.jpeg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -28,7 +31,12 @@ class _StartState extends State<Start> {
                       height: 45.0,
                       width: MediaQuery.of(context).size.width * 0.4,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Profile()));
+                        },
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30)),
@@ -62,13 +70,18 @@ class _StartState extends State<Start> {
                     height: 8,
                   ),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Notifications()));
+                      },
                       child: Text(
                         "Skip",
                         style: TextStyle(
                           fontSize: 16,
                           decoration: TextDecoration.underline,
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                       ))
                 ],
