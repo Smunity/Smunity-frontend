@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:smunity/addcompany.dart';
+import 'package:smunity/eventdetails.dart';
+import 'package:smunity/eventpage.dart';
 import 'package:smunity/interest.dart';
 import 'package:smunity/profile.dart';
 import 'package:smunity/home.dart';
+import 'package:smunity/tagline.dart';
+import 'package:smunity/visitevent.dart';
+import 'package:smunity/website.dart';
 
+import 'addevent.dart';
 import 'login.dart';
 import 'notifications.dart';
 
@@ -34,8 +41,10 @@ class _StartState extends State<Start> {
                       width: MediaQuery.of(context).size.width * 0.4,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Login()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Tagline()));
                         },
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
@@ -56,7 +65,7 @@ class _StartState extends State<Start> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Interest()));
+                                  builder: (context) => Website()));
                         },
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
@@ -71,10 +80,8 @@ class _StartState extends State<Start> {
                   ),
                   TextButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Notifications()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Company()));
                       },
                       child: Text(
                         "Skip",
