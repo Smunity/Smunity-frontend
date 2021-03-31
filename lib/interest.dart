@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:smunity/events.dart';
 import 'package:smunity/login.dart';
+import 'package:smunity/navigation.dart';
 import 'package:smunity/search.dart';
 
 class Interest extends StatefulWidget {
@@ -118,18 +120,21 @@ class _InterestState extends State<Interest> {
             ),
             Container(
                 height: 40.0,
-                width: 140,
+                width: 80,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Search()));
+                        MaterialPageRoute(builder: (context) => Navigation()));
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30)),
                     primary: Color(0xFFFB8437),
                   ),
-                  child: Text('SUBMIT', style: TextStyle(color: Colors.white)),
+                  child: Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                  ),
                 )),
           ],
         ),

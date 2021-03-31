@@ -4,6 +4,8 @@ import 'package:smunity/events_model.dart';
 import 'package:smunity/search.dart';
 import 'package:smunity/settings.dart';
 
+import 'eventdetails.dart';
+
 class MainWindow extends StatefulWidget {
   @override
   _MainWindowState createState() => _MainWindowState();
@@ -91,21 +93,6 @@ class _MainWindowState extends State<MainWindow> {
             },
           ),
         )),
-        bottomNavigationBar: Container(
-          height: 50,
-          color: Colors.grey[900],
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Icon(
-                Icons.home,
-                color: Color(0xfffb8437),
-              ),
-              Icon(Icons.notifications, color: Colors.white),
-              Icon(Icons.menu, color: Colors.white)
-            ],
-          ),
-        ),
       ),
     );
   }
@@ -179,7 +166,7 @@ Widget eventBox(context, String title) {
                             onPressed: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Settings())),
+                                    builder: (context) => EventDetails())),
                             child: Text(
                               "Attend",
                               style:
