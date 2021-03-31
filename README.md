@@ -1,1 +1,3 @@
-# Smunity-frontend
+# Smunity
+
+- Follow These Processes to Run The APP
