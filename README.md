@@ -16,3 +16,6 @@ https://github.com/Smunity/Smunity-frontend
 ```ruby
 flutter run
 ```
+
+#### Backend Code can be found here
+https://github.com/Smunity/Smunity-Backend/tree/branch-0.1
