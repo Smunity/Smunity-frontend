@@ -17,5 +17,11 @@ https://github.com/Smunity/Smunity-frontend
 flutter run
 ```
 
+### 4) Login Credentials
+```ruby
+username: user 
+password: userhello
+```
+
 #### Backend Code can be found here
 https://github.com/Smunity/Smunity-Backend/tree/branch-0.1
